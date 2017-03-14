@@ -39,12 +39,12 @@ export class Stats {
         this.showPanel(0);
     }
 
-    private addPanel(panel: Panel) {
+    public addPanel(panel: Panel) {
         this.container.appendChild(panel.dom);
         return panel;
     }
 
-    private showPanel(id :number) {
+    public showPanel(id :number) {
         for (var i = 0; i < this.container.children.length; i++) {
             (this.container.children[i] as HTMLElement).style.display = i === id ? 'block' : 'none';
         }
@@ -80,7 +80,7 @@ export class Stats {
 }
 
 
-class Panel {
+export class Panel {
 
     public dom;
     private min = Infinity;
@@ -144,3 +144,4 @@ class Panel {
 
 
 }
+

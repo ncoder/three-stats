@@ -105,3 +105,4 @@ var Panel = (function () {
     };
     return Panel;
 }());
+exports.Panel = Panel;

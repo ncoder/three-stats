@@ -12,9 +12,30 @@ export declare class Stats {
     private msPanel;
     private memPanel;
     constructor();
-    private addPanel(panel);
-    private showPanel(id);
+    addPanel(panel: Panel): Panel;
+    showPanel(id: number): void;
     begin(): void;
     end(): number;
     update(): void;
+}
+export declare class Panel {
+    private name;
+    private fg;
+    private bg;
+    dom: any;
+    private min;
+    private max;
+    private PR;
+    private WIDTH;
+    private HEIGHT;
+    private TEXT_X;
+    private TEXT_Y;
+    private GRAPH_X;
+    private GRAPH_Y;
+    private GRAPH_WIDTH;
+    private GRAPH_HEIGHT;
+    private canvas;
+    private context;
+    constructor(name: any, fg: any, bg: any);
+    update(value: any, maxValue: any): void;
 }
